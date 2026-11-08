@@ -92,7 +92,7 @@ function App() {
         onChange={(e) => setDueDate(e.target.value)}
       />
 
-      <button onClick={addTask}>Add Task</button>
+      <button onClick={addTask}>추가 Task</button>
 
       <h2 className="active-tasks-title">Active Tasks</h2>
       <ul>
