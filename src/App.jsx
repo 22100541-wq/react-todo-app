@@ -66,14 +66,14 @@ function App() {
 
   return (
     <div className="container">
-      <h1>To-Do List</h1>
+      <h1>공부할거</h1>
 
       {/* Task Input */}
       <input
         type="text"
         value={task}
         onChange={(e) => setTask(e.target.value)}
-        placeholder="Enter your task here"
+        placeholder="공부할거 입력해라"
       />
 
       {/* Category Dropdown */}
