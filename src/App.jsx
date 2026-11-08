@@ -9,7 +9,7 @@ function App() {
   const [showCompleted, setShowCompleted] = useState(false);
   const [editIndex, setEditIndex] = useState(null);
   const [editText, setEditText] = useState("");
-  const [category, setCategory] = useState("Personal");
+  const [category, setCategory] = useState("줸장할 과제");
   const [dueDate, setDueDate] = useState("");
 
   // Load tasks from localStorage when page first loads
@@ -77,11 +77,11 @@ function App() {
       />
 
       {/* Category Dropdown */}
-      <p className="field-label">Category</p>
+      <p className="field-label">할거</p>
       <select value={category} onChange={(e) => setCategory(e.target.value)}>
-        <option value="Personal">Personal</option>
-        <option value="Work">Work</option>
-        <option value="Shopping">Shopping</option>
+        <option value="줸장할 과제">줸장할 과제</option>
+        <option value="과목">과목</option>
+        <option value="안해도 되는 예습 복습">안해도 되는 예습 복습</option>
       </select>
 
       {/* Due Date Input */}
@@ -131,7 +131,7 @@ function App() {
           <ul>
             {completedTasks.map((t, index) => (
               <li key={index} className="completed-task">
-                {t.text} ({t.category}) {t.dueDate && `- Due: ${t.dueDate}`}
+                {t.text} ({t.category}) {t.dueDate && `| 마감언제까지 할거야!!!: ${t.dueDate}`}
                 <button onClick={() => undoTask(index)}>↩ Undo</button>
               </li>
             ))}
